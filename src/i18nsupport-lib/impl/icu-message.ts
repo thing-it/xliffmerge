@@ -1,5 +1,6 @@
 import {IICUMessage, IICUMessageCategory, IICUMessageTranslation, INormalizedMessage} from '../api/index';
-import {format, isNullOrUndefined, isString} from 'util';
+import {format} from 'util';
+import {isNullOrUndefined, isString} from '../../common/util';
 import {IMessageParser} from './i-message-parser';
 
 class MessageCategory implements IICUMessageCategory {

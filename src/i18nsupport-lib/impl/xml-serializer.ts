@@ -19,6 +19,18 @@
  * </pre>
  */
 
+import {
+  Attr,
+  CDATASection,
+  Comment,
+  Document,
+  DocumentType,
+  Element,
+  Node,
+  ProcessingInstruction,
+  Text,
+} from '../xml-dom';
+
 interface Namespace {
   prefix: string;
   namespace: string;

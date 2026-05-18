@@ -1,4 +1,4 @@
-import { DOMParser, XMLSerializer } from "@xmldom/xmldom";
+import { DOMParser, XMLSerializer, Document, Element, Node } from "../xml-dom";
 /**
  * Created by martin on 01.05.2017.
  * Some Tool functions for XML Handling.

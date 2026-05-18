@@ -1,3 +1,4 @@
+import {Element, Node} from '../xml-dom';
 import {AbstractMessageParser} from './abstract-message-parser';
 import {ParsedMessage} from './parsed-message';
 import {ParsedMessagePartStartTag} from './parsed-message-part-start-tag';

@@ -1,3 +1,4 @@
+import {Element, Node} from '../xml-dom';
 import {AbstractMessageParser} from './abstract-message-parser';
 import {ParsedMessage} from './parsed-message';
 import {ParsedMessagePartStartTag} from './parsed-message-part-start-tag';
@@ -6,7 +7,7 @@ import {ParsedMessagePartPlaceholder} from './parsed-message-part-placeholder';
 import {TagMapping} from './tag-mapping';
 import {ParsedMessagePartEmptyTag} from './parsed-message-part-empty-tag';
 import {ParsedMessagePartICUMessageRef} from './parsed-message-part-icu-message-ref';
-import {isNullOrUndefined} from 'util';
+import {isNullOrUndefined} from '../../common/util';
 import {ParsedMessagePartType} from './parsed-message-part';
 import {ParsedMessagePartText} from './parsed-message-part-text';
 /**

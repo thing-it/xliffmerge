@@ -13,17 +13,10 @@ import {map} from 'rxjs/operators';
  * Types form google translate api.
  */
 
-interface GetSupportedLanguagesRequest {
-    target: string; // The language to use to return localized, human readable names of supported\nlanguages.
-}
 
 interface LanguagesResource {
     language: string; // code of the language
     name: string; // human readable name (in target language)
-}
-
-interface LanguagesListResponse {
-    languages: LanguagesResource[];
 }
 
 interface TranslateTextRequest {
@@ -38,10 +31,6 @@ interface TranslationsResource {
     detectedSourceLanguage?: string;
     model?: string;
     translatedText: string;
-}
-
-interface TranslationsListResponse {
-    translations: TranslationsResource[];
 }
 
 interface InternalRequestResponse {
