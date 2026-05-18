@@ -1,3 +1,4 @@
+import {Element} from '../xml-dom';
 import {INormalizedMessage} from '../api/index';
 /**
  * Created by roobm on 16.05.2017.

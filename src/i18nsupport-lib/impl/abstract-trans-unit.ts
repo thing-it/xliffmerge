@@ -1,6 +1,7 @@
+import {Element} from '../xml-dom';
 import {STATE_TRANSLATED, ITranslationMessagesFile, INormalizedMessage, ITransUnit, INote} from './internalapi';
 import {AbstractTranslationMessagesFile} from './abstract-translation-messages-file';
-import {isNullOrUndefined, isString} from 'util';
+import {isNullOrUndefined, isString} from '../../common/util';
 import {ParsedMessage} from './parsed-message';
 import {AbstractMessageParser} from './abstract-message-parser';
 /**

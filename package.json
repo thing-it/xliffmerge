@@ -1,12 +1,12 @@
 {
   "name": "@thing-it/xliffmerge",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "private": false,
   "bin": {
     "xliffmerge": "dist/bin/xliffmerge.js"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=22.16.0"
   },
   "scripts": {
     "build": "rm -rf dist/ && tsc && cp -r bin dist/",
@@ -24,15 +24,11 @@
   "license": "MIT",
   "homepage": "https://github.com/thing-it/xliffmerge#readme",
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.10",
-    "chalk": "^2.4.1",
+    "@cypress/request": "^4.0.0",
+    "@xmldom/xmldom": "^0.9.10",
+    "chalk": "^5.6.2",
     "he": "^1.2.0",
-    "@cypress/request": "^3.0.1",
-    "rxjs": "^7.8.1",
-    "tokenizr": "^1.6.10"
-  },
-  "devDependencies": {
-    "@types/node": "^20.10.3",
-    "@types/tokenizr": "^1.6.1"
+    "rxjs": "^7.8.2",
+    "tokenizr": "^2.2.1"
   }
 }

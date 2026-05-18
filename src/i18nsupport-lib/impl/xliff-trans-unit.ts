@@ -1,3 +1,4 @@
+import {Element} from '../xml-dom';
 import {STATE_NEW, STATE_TRANSLATED, STATE_FINAL} from '../api/constants';
 import {ITranslationMessagesFile} from '../api/i-translation-messages-file';
 import {INormalizedMessage} from '../api/i-normalized-message';
@@ -8,7 +9,7 @@ import {AbstractTransUnit} from './abstract-trans-unit';
 import {XliffMessageParser} from './xliff-message-parser';
 import {ParsedMessage} from './parsed-message';
 import {AbstractMessageParser} from './abstract-message-parser';
-import {isNullOrUndefined} from 'util';
+import {isNullOrUndefined} from '../../common/util';
 /**
  * Created by martin on 01.05.2017.
  * A Translation Unit in an XLIFF 1.2 file.
@@ -35,7 +36,7 @@ export class XliffTransUnit extends AbstractTransUnit implements ITransUnit {
         let source = DOMUtilities.getFirstElementByTagName(this._element, 'source');
         if (!source) {
             // should not happen, there always has to be a source, but who knows..
-            source = this._element.appendChild(this._element.ownerDocument.createElement('source'));
+            source = <Element>this._element.appendChild(this._element.ownerDocument.createElement('source'));
         }
         DOMUtilities.replaceContentWithXMLContent(source, newContent);
     }

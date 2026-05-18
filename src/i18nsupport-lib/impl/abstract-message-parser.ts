@@ -11,12 +11,13 @@ import {
   Token,
 } from "./parsed-message-tokenizer";
 import { ParsedMessagePartText } from "./parsed-message-part-text";
-import { DOMParser } from "@xmldom/xmldom";
+import { DOMParser, Document, Element, Node } from "../xml-dom";
 import { ParsedMessagePartStartTag } from "./parsed-message-part-start-tag";
 import { ParsedMessagePartPlaceholder } from "./parsed-message-part-placeholder";
 import { ParsedMessagePartEndTag } from "./parsed-message-part-end-tag";
 import { IMessageParser } from "./i-message-parser";
-import { format, isNullOrUndefined } from "util";
+import { format } from "util";
+import { isNullOrUndefined } from "../../common/util";
 import { DOMUtilities } from "./dom-utilities";
 import { ParsedMessagePartEmptyTag } from "./parsed-message-part-empty-tag";
 import { ParsedMessagePartICUMessageRef } from "./parsed-message-part-icu-message-ref";

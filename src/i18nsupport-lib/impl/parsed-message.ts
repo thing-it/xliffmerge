@@ -1,3 +1,4 @@
+import {Element} from '../xml-dom';
 import {ParsedMessagePart, ParsedMessagePartType} from './parsed-message-part';
 import {ParsedMessagePartText} from './parsed-message-part-text';
 import {ParsedMessagePartPlaceholder} from './parsed-message-part-placeholder';
@@ -6,7 +7,8 @@ import {ParsedMessagePartEndTag} from './parsed-message-part-end-tag';
 import {INormalizedMessage, ValidationErrors} from '../api/i-normalized-message';
 import {DOMUtilities} from './dom-utilities';
 import {IMessageParser} from './i-message-parser';
-import {format, isNullOrUndefined} from 'util';
+import {format} from 'util';
+import {isNullOrUndefined} from '../../common/util';
 import {IICUMessage, IICUMessageTranslation} from '../api/i-icu-message';
 import {ParsedMessagePartICUMessage} from './parsed-message-part-icu-message';
 import {ParsedMessagePartICUMessageRef} from './parsed-message-part-icu-message-ref';

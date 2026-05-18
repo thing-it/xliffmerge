@@ -1,4 +1,5 @@
-import {isNullOrUndefined} from 'util';
+import {Element} from '../xml-dom';
+import {isNullOrUndefined} from '../../common/util';
 import {ITranslationMessagesFile} from '../api/i-translation-messages-file';
 import {INormalizedMessage} from '../api/i-normalized-message';
 import {ITransUnit} from '../api/i-trans-unit';

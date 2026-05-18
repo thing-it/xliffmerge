@@ -1,3 +1,4 @@
+import {Element} from '../xml-dom';
 import {ITranslationMessagesFile} from '../api/i-translation-messages-file';
 import {INormalizedMessage} from '../api/i-normalized-message';
 import {ITransUnit} from '../api/i-trans-unit';

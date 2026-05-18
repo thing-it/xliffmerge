@@ -1,5 +1,5 @@
-import Tokenizr from 'tokenizr';
-import {isNullOrUndefined} from 'util';
+import {Tokenizr} from 'tokenizr';
+import {isNullOrUndefined} from '../../common/util';
 
 /**
  * Created by martin on 14.05.2017.

@@ -1,3 +1,4 @@
+import {Element, Node} from '../xml-dom';
 import {STATE_NEW, STATE_TRANSLATED, STATE_FINAL} from '../api/constants';
 import {ITranslationMessagesFile} from '../api/i-translation-messages-file';
 import {INormalizedMessage} from '../api/i-normalized-message';
@@ -8,7 +9,7 @@ import {ParsedMessage} from './parsed-message';
 import {AbstractTransUnit} from './abstract-trans-unit';
 import {Xliff2MessageParser} from './xliff2-message-parser';
 import {AbstractMessageParser} from './abstract-message-parser';
-import {isNullOrUndefined} from 'util';
+import {isNullOrUndefined} from '../../common/util';
 /**
  * Created by martin on 04.05.2017.
  * A Translation Unit in an XLIFF 2.0 file.
@@ -36,7 +37,7 @@ export class Xliff2TransUnit extends AbstractTransUnit  implements ITransUnit {
         if (!source) {
             // should not happen, there always has to be a source, but who knows..
             const segment = DOMUtilities.getFirstElementByTagName(this._element, 'segment');
-            source = segment.parentNode.appendChild(this._element.ownerDocument.createElement('source'));
+            source = <Element>segment.parentNode.appendChild(this._element.ownerDocument.createElement('source'));
         }
         DOMUtilities.replaceContentWithXMLContent(source, newContent);
     }
@@ -434,7 +435,7 @@ export class Xliff2TransUnit extends AbstractTransUnit  implements ITransUnit {
         let target = DOMUtilities.getFirstElementByTagName(this._element, 'target');
         if (!target) {
             const source = DOMUtilities.getFirstElementByTagName(this._element, 'source');
-            target = source.parentNode.appendChild(this._element.ownerDocument.createElement('target'));
+            target = <Element>source.parentNode.appendChild(this._element.ownerDocument.createElement('target'));
         }
         DOMUtilities.replaceContentWithXMLContent(target, <string> translation);
         this.setTargetState(STATE_TRANSLATED);
@@ -461,7 +462,7 @@ export class Xliff2TransUnit extends AbstractTransUnit  implements ITransUnit {
         const source = DOMUtilities.getFirstElementByTagName(this._element, 'source');
         let target = DOMUtilities.getFirstElementByTagName(this._element, 'target');
         if (!target) {
-            target = source.parentNode.appendChild(this._element.ownerDocument.createElement('target'));
+            target = <Element>source.parentNode.appendChild(this._element.ownerDocument.createElement('target'));
         }
         if (isDefaultLang || copyContent) {
             const sourceString = DOMUtilities.getXMLContent(source);
